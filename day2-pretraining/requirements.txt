@@ -1,0 +1,8 @@
+transformers
+torch
+# untuk fine-tuning sungguhan (opsional, butuh GPU):
+# trl
+# peft
+# datasets
+# accelerate
+# bitsandbytes
