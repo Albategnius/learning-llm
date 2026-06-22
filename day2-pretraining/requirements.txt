@@ -1,8 +1,16 @@
+# Core
 transformers
 torch
-# untuk fine-tuning sungguhan (opsional, butuh GPU):
-# trl
-# peft
-# datasets
-# accelerate
-# bitsandbytes
+datasets
+
+# Fine-tuning dasar (05_finetuning_sft.py)
+trl
+accelerate
+
+# QLoRA fine-tuning (06_qlora_finetuning.py) — butuh GPU
+peft
+bitsandbytes   # 4-bit quantization, hanya Linux/GPU
+
+# Opsional — monitoring training
+# tensorboard
+# wandb
