@@ -89,3 +89,28 @@ python 04_scaling_laws.py       # Kalkulator Chinchilla scaling laws
 ## Lisensi
 
 Untuk keperluan belajar pribadi.
+
+## Hari 3 — Prompting & In-Context Learning
+
+Topik: zero-shot, few-shot, chain-of-thought, role prompting,
+structured output, prompt injection, dan evaluasi prompt sistematis.
+
+### Cara menjalankan
+
+```bash
+cd day3-prompting
+pip install -r requirements.txt
+export ANTHROPIC_API_KEY="sk-ant-..."
+
+python 01_prompting_techniques.py  # Demo semua teknik prompting
+python 02_prompt_evaluation.py     # Evaluasi & bandingkan versi prompt
+```
+
+### Ringkasan konsep
+
+- **Zero-shot**: langsung beri tugas tanpa contoh. Cepat tapi format output tidak terprediksi.
+- **Few-shot**: berikan 2–5 contoh sebelum pertanyaan. Format output jadi konsisten.
+- **Chain-of-Thought**: tambahkan "Mari kita pikirkan langkah demi langkah" untuk reasoning kompleks.
+- **Role prompting**: system message mengubah persona, gaya, dan level teknis output.
+- **Structured output**: minta JSON dengan schema eksplisit + prefill "{" untuk memaksa format.
+- **Prompt evaluation**: buat test set dengan ground truth, ukur accuracy tiap versi prompt secara kuantitatif.
