@@ -1,0 +1,15 @@
+# File 01 — RAG dari scratch
+anthropic
+numpy
+
+# File 02 — RAG dengan LangChain
+langchain
+langchain-anthropic
+langchain-chroma
+langchain-community
+chromadb
+sentence-transformers   # untuk embedding offline (gratis)
+pypdf                   # untuk load PDF
+
+# File 03 — evaluasi
+anthropic               # sudah include di atas

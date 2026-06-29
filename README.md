@@ -114,3 +114,28 @@ python 02_prompt_evaluation.py     # Evaluasi & bandingkan versi prompt
 - **Role prompting**: system message mengubah persona, gaya, dan level teknis output.
 - **Structured output**: minta JSON dengan schema eksplisit + prefill "{" untuk memaksa format.
 - **Prompt evaluation**: buat test set dengan ground truth, ukur accuracy tiap versi prompt secara kuantitatif.
+
+## Hari 4 — RAG & Aplikasi LLM
+
+Topik: arsitektur RAG, chunking, embedding similarity, vector database,
+LangChain, ChromaDB, dan evaluasi RAG dengan RAGAS metrics.
+
+### Cara menjalankan
+
+```bash
+cd day4-rag
+pip install -r requirements.txt
+export ANTHROPIC_API_KEY="sk-ant-..."
+
+python 01_rag_from_scratch.py   # RAG dari nol dengan numpy, tanpa library
+python 02_rag_langchain.py      # RAG production-ready: LangChain + ChromaDB
+python 03_rag_evaluation.py     # Evaluasi: faithfulness, relevancy, recall
+```
+
+### Ringkasan konsep
+
+- **RAG** = ambil chunk relevan dari dokumen eksternal, masukkan ke konteks, baru tanya LLM.
+- **Chunking**: potong dokumen jadi potongan kecil dengan overlap — supaya info di batas potongan tidak hilang.
+- **Embedding similarity**: query dan chunk diubah ke vektor, lalu cosine similarity menentukan mana yang paling relevan.
+- **Vector DB**: menyimpan chunk + embedding, mendukung nearest neighbor search cepat (FAISS, Chroma, Pinecone).
+- **RAGAS metrics**: faithfulness (tidak halusinasi?), answer relevancy (relevan?), context precision (chunk berguna?), context recall (info cukup?).
